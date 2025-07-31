@@ -76,7 +76,6 @@ const MostPopular = () => {
     },
   ];
 
-
   const handleProductClick = (product: Product) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
@@ -99,7 +98,6 @@ const MostPopular = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Descubre nuestros perfumes más vendidos
           </p>
-
         </div>
 
         {/* Products Grid */}

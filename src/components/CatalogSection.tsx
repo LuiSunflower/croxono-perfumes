@@ -198,7 +198,9 @@ const CatalogSection = () => {
                     height={200}
                   />
                 </div>
-                <h3 className="text-xs font-bold truncate w-full text-center">{product.name}</h3>
+                <h3 className="text-xs font-bold truncate w-full text-center">
+                  {product.name}
+                </h3>
                 <p className="text-xs font-bold text-primary mb-2 mt-1">
                   {product.price}
                 </p>

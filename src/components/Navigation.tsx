@@ -3,6 +3,7 @@ import { User } from "lucide-react";
 
 import { CartSheet } from "./CartSheet";
 import Image from "next/image";
+import logoImage from "../../public/assets/croxono-logo.jpeg";
 
 const Navigation = () => {
   const navItems = [
@@ -19,15 +20,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-gold rounded-full flex items-center justify-center">
             <Image
-              src="/assets/croxono-logo.jpeg"
+              src={logoImage}
               alt="Croxono"
               className="w-8 h-8"
               width={40}
               height={40}
             />
-            </div>
             <span className="text-2xl font-bold text-foreground">CROXONO</span>
           </div>
 

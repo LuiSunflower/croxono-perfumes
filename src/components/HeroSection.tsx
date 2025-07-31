@@ -24,7 +24,7 @@ const HeroSection = () => {
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-luxury transform hover:scale-105 transition-all duration-300"
           >
-            <Link href="#catalog">Ver Perfumes</Link>
+            <Link href="#most-popular">Ver Perfumes más populares</Link>
           </Button>
           <Button
             variant="outline"

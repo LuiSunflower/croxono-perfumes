@@ -7,6 +7,7 @@ import { Product, useCart } from "@/lib/cart-context";
 import { Toast } from "./Toast";
 import Image from "next/image";
 import { Eye, ShoppingCart } from "lucide-react";
+import Link from "next/link";
 
 const MostPopular = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -161,7 +162,7 @@ const MostPopular = () => {
             size="lg"
             className="bg-white text-gray-900 hover:bg-gray-100 hover:shadow-luxury transform hover:scale-105 transition-all duration-300"
           >
-            Ver Catálogo Completo
+            <Link href="/catalog">Ver Catálogo Completo</Link>
           </Button>
         </div>
       </div>

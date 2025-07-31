@@ -11,7 +11,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useCart } from "@/lib/cart-context";
-import { ShoppingBag, Trash2, Plus, Minus, MessageCircle } from "lucide-react";
+import { Trash2, Plus, Minus, MessageCircle, ShoppingCartIcon } from "lucide-react";
 import Image from "next/image";
 
 export function CartSheet() {
@@ -54,7 +54,7 @@ export function CartSheet() {
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="ghost" size="icon" className="relative">
-          <ShoppingBag className="h-5 w-5" />
+          <ShoppingCartIcon className="h-5 w-5" />
           {getTotalItems() > 0 && (
             <Badge
               variant="destructive"
@@ -68,7 +68,7 @@ export function CartSheet() {
       <SheetContent className="w-full sm:max-w-md">
         <SheetHeader>
           <SheetTitle className="flex items-center space-x-2">
-            <ShoppingBag className="h-5 w-5" />
+            <ShoppingCartIcon className="h-5 w-5" />
             <span>Carrito de Compras</span>
           </SheetTitle>
           <SheetDescription>
@@ -85,7 +85,7 @@ export function CartSheet() {
           <div className="flex-1 overflow-y-auto py-4">
             {items.length === 0 ? (
               <div className="text-center py-8 text-muted-foreground">
-                <ShoppingBag className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                <ShoppingCartIcon className="h-12 w-12 mx-auto mb-4 opacity-50" />
                 <p>No hay productos en tu carrito</p>
                 <p className="text-sm">
                   ¡Agrega algunos perfumes para comenzar!

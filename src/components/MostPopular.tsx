@@ -162,7 +162,7 @@ const MostPopular = () => {
             size="lg"
             className="bg-white text-gray-900 hover:bg-gray-100 hover:shadow-luxury transform hover:scale-105 transition-all duration-300"
           >
-            <Link href="/catalog">Ver Catálogo Completo</Link>
+            <Link href="#catalog">Ver Catálogo Completo</Link>
           </Button>
         </div>
       </div>

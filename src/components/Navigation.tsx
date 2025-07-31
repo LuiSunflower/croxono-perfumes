@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { User } from "lucide-react";
+import { ShoppingCartIcon, User } from "lucide-react";
 
-import { CartSheet } from "./CartSheet";
 import Image from "next/image";
 import logoImage from "../../public/assets/croxono-logo.jpeg";
 
@@ -48,7 +47,7 @@ const Navigation = () => {
             <Button variant="ghost" size="icon">
               <User className="h-5 w-5" />
             </Button>
-            <CartSheet />
+            <ShoppingCartIcon className="h-5 w-5" />
           </div>
         </div>
       </div>

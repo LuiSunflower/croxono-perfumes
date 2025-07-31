@@ -46,6 +46,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       }
     } catch (error) {
       console.warn("Could not load cart from localStorage");
+      console.error(error);
     }
   }, []);
 
@@ -56,6 +57,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       localStorage.setItem("cart", JSON.stringify(items));
     } catch (error) {
       console.warn("Could not save cart to localStorage");
+      console.error(error);
     }
   }, [items, mounted]);
 

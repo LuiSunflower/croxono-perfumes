@@ -15,8 +15,6 @@ const MostPopular = () => {
   const [toastMessage, setToastMessage] = useState("");
   const { addToCart } = useCart();
 
-  const categories = ["Hombres", "Mujeres", "Unisex"];
-
   const products: Product[] = [
     {
       id: 1,

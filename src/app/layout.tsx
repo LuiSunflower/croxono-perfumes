@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  verification: {
+    google: "0DxBeGJBCE8u3t0XxEjviEecoPMFfTCFILr77n2iCws",
+  },
 };
 
 export default function RootLayout({
@@ -28,13 +31,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="dark">
-      <head>
-        <meta
-          name="google-site-verification"
-          content="0DxBeGJBCE8u3t0XxEjviEecoPMFfTCFILr77n2iCws"
-        />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >

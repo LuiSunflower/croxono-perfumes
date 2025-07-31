@@ -38,6 +38,7 @@ export function CartSheet() {
 
   const generateWhatsAppMessage = () => {
     const header = "🛍️ *SOLICITUD DE COMPRA - CROXONO PERFUMES*\n\n";
+    const subheader = "Buenas tardes, me encuentro interesado en los siguientes productos: \n\n";
     const itemsList = items
       .map(
         (item) =>
@@ -45,10 +46,8 @@ export function CartSheet() {
       )
       .join("\n");
     const total = `\n💰 *Total: ${getTotalPrice()}*\n\n`;
-    const footer =
-      "Por favor, confirma mi pedido y proporciona información de envío. ¡Gracias!";
 
-    return header + itemsList + total + footer;
+    return header + subheader + itemsList + total;
   };
 
   return (

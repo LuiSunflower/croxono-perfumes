@@ -12,7 +12,6 @@ const Footer = () => {
     "Términos y Condiciones",
     "Garantía",
     "Envíos",
-    "Devoluciones"
   ];
 
   return (

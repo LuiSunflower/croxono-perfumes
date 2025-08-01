@@ -9,7 +9,7 @@ import Image from "next/image";
 import { Eye, ShoppingCart } from "lucide-react";
 
 const CatalogSection = () => {
-  const [activeCategory, setActiveCategory] = useState("Hombres");
+  const [activeCategory, setActiveCategory] = useState("Todos");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showToast, setShowToast] = useState(false);

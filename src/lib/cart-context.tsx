@@ -1,12 +1,13 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { StaticImageData } from "next/image";
 
 export interface Product {
   id: number;
   name: string;
   price: string;
-  image: string;
+  image: string | StaticImageData;
   category: string;
   description: string;
   notes: string[];

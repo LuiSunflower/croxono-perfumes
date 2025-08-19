@@ -17,6 +17,11 @@ const AboutSection = () => {
       icon: Eye,
       title: "Transparencia",
       description: "Precios claros y asesoría profesional honesta"
+    },
+    {
+      icon: Eye,
+      title: "Asesoría",
+      description: "Conexión personalizada con tu esencia ideal"
     }
   ];
 

@@ -7,6 +7,9 @@ import { Product, useCart } from "@/lib/cart-context";
 import { Toast } from "./Toast";
 import Image from "next/image";
 import { Eye, ShoppingCart } from "lucide-react";
+import mansPerfums from "@/products/data/man";
+import womansPerfums from "@/products/data/woman";
+import unisexPerfums from "@/products/data/unisex";
 
 const CatalogSection = () => {
   const [activeCategory, setActiveCategory] = useState("Todos");
@@ -19,124 +22,15 @@ const CatalogSection = () => {
   const categories = ["Todos", "Hombres", "Mujeres", "Unisex"];
 
   const products: Product[] = [
-    {
-      id: 1,
-      name: "Oud Royal",
-      price: "$150",
-      image: "/assets/perfume-3.jpg",
-      category: "Hombres",
-      description:
-        "Una fragancia oriental exótica que combina la riqueza del oud con notas de especias y maderas preciosas.",
-      notes: ["Oud", "Sándalo", "Rosa", "Azafrán", "Ámbar"],
-      concentration: "Eau de Parfum",
-      duration: "8-12 horas",
-      size: "100ml",
-      origin: "Emiratos Árabes Unidos",
-    },
-    {
-      id: 2,
-      name: "Dubai Nights",
-      price: "$180",
-      image: "/assets/perfume-1.jpg",
-      category: "Hombres",
-      description:
-        "Una experiencia olfativa que captura la magia de las noches de Dubai con notas de incienso y especias orientales.",
-      notes: ["Incienso", "Bergamota", "Cardamomo", "Vainilla", "Musk"],
-      concentration: "Eau de Parfum",
-      duration: "10-14 horas",
-      size: "100ml",
-      origin: "Emiratos Árabes Unidos",
-    },
-    {
-      id: 3,
-      name: "Arabian Rose",
-      price: "$160",
-      image: "/assets/perfume-3.jpg",
-      category: "Mujeres",
-      description:
-        "Una rosa árabe exquisita combinada con notas florales y orientales para crear una fragancia femenina sofisticada.",
-      notes: ["Rosa Damascena", "Jazmín", "Sándalo", "Ámbar", "Vainilla"],
-      concentration: "Eau de Parfum",
-      duration: "8-12 horas",
-      size: "100ml",
-      origin: "Emiratos Árabes Unidos",
-    },
-    {
-      id: 4,
-      name: "Desert Wind",
-      price: "$140",
-      image: "/assets/perfume-1.jpg",
-      category: "Unisex",
-      description:
-        "Una fragancia que evoca la brisa del desierto con notas frescas y terrosas que son perfectas para cualquier ocasión.",
-      notes: ["Bergamota", "Cedro", "Vetiver", "Musk", "Ámbar Gris"],
-      concentration: "Eau de Toilette",
-      duration: "6-8 horas",
-      size: "100ml",
-      origin: "Emiratos Árabes Unidos",
-    },
-    {
-      id: 5,
-      name: "Nueva fragancia",
-      price: "$140",
-      image: "/assets/perfume-1.jpg",
-      category: "Unisex",
-      description:
-        "Una fragancia que evoca la brisa del desierto con notas frescas y terrosas que son perfectas para cualquier ocasión.",
-      notes: ["Bergamota", "Cedro", "Vetiver", "Musk", "Ámbar Gris"],
-      concentration: "Eau de Toilette",
-      duration: "6-8 horas",
-      size: "100ml",
-      origin: "Emiratos Árabes Unidos",
-    },
-    {
-      id: 6,
-      name: "Nueva fragancia",
-      price: "$140",
-      image: "/assets/perfume-1.jpg",
-      category: "Unisex",
-      description:
-        "Una fragancia que evoca la brisa del desierto con notas frescas y terrosas que son perfectas para cualquier ocasión.",
-      notes: ["Bergamota", "Cedro", "Vetiver", "Musk", "Ámbar Gris"],
-      concentration: "Eau de Toilette",
-      duration: "6-8 horas",
-      size: "100ml",
-      origin: "Emiratos Árabes Unidos",
-    },
-    {
-      id: 7,
-      name: "Nueva fragancia",
-      price: "$140",
-      image: "/assets/perfume-1.jpg",
-      category: "Unisex",
-      description:
-        "Una fragancia que evoca la brisa del desierto con notas frescas y terrosas que son perfectas para cualquier ocasión.",
-      notes: ["Bergamota", "Cedro", "Vetiver", "Musk", "Ámbar Gris"],
-      concentration: "Eau de Toilette",
-      duration: "6-8 horas",
-      size: "100ml",
-      origin: "Emiratos Árabes Unidos",
-    },
-    {
-      id: 8,
-      name: "Nueva fragancia adfa sdf asdfa sdfa sdfas fasdfa sdfa",
-      price: "$140",
-      image: "/assets/perfume-1.jpg",
-      category: "Unisex",
-      description:
-        "Una fragancia que evoca la brisa del desierto con notas frescas y terrosas que son perfectas para cualquier ocasión.",
-      notes: ["Bergamota", "Cedro", "Vetiver", "Musk", "Ámbar Gris"],
-      concentration: "Eau de Toilette",
-      duration: "6-8 horas",
-      size: "100ml",
-      origin: "Emiratos Árabes Unidos",
-    },
+    ...mansPerfums,
+    ...womansPerfums,
+    ...unisexPerfums,
   ];
 
-  const filteredProducts = products.filter(
-    (product) =>
-      activeCategory === "Todos" || product.category === activeCategory
-  );
+  const filteredProducts = products.filter((product) => {
+    if (activeCategory === "Todos") return true;
+    return product.category === activeCategory;
+  });
 
   const handleProductClick = (product: Product) => {
     setSelectedProduct(product);
